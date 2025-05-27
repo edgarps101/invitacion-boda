@@ -1,0 +1,478 @@
+/* ==========================
+   ESTILOS GENERALES Y FUENTES
+   ========================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:wght@300;400;700&display=swap');
+
+/*
+  Ejemplo de fuentes:
+  font-family: 'Playfair Display', serif; (Para títulos)
+  font-family: 'Lato', sans-serif; (Para texto general)
+*/
+
+:root {
+    --color-primario: #8B5A2B; /* Un marrón elegante, puedes cambiarlo */
+    --color-secundario: #D4AC0D; /* Un dorado/ocre, puedes cambiarlo */
+    --color-texto: #333333;
+    --color-fondo: #fdfaf6; /* Un blanco hueso o crema claro */
+    --color-blanco: #ffffff;
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-texto: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    margin: 0;
+    padding: 0;
+    color: var(--color-texto);
+    line-height: 1.7;
+    background-color: var(--color-fondo);
+    overflow-x: hidden; /* Evita scroll horizontal indeseado */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    margin-top: 0;
+}
+
+h2 { /* Estilo para los títulos de sección */
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative; /* Para posibles adornos */
+}
+
+/* Puedes añadir un adorno sutil a los títulos de sección */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-secundario);
+    margin: 10px auto 0;
+}
+
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-secundario);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.seccion {
+    padding: 60px 20px;
+    text-align: center;
+    opacity: 0; /* Inicial para animación de entrada */
+    transform: translateY(30px); /* Inicial para animación de entrada */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.seccion.animated { /* Clase que añadirá JS para activar la animación */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================
+   ESTILOS DE LA PORTADA
+   ========================== */
+#portada {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/portada-boda.png'); /* Reemplaza con tu imagen de portada */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Efecto parallax sutil */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-blanco);
+    text-align: center;
+    position: relative;
+}
+
+#portada .portada-contenido {
+    background-color: rgba(0, 0, 0, 0.1); /* Sombra muy ligera si es necesaria */
+    padding: 30px 50px;
+    border-radius: 10px;
+    animation: fadeInPortada 1.5s ease-out forwards; /* Animación para el contenido */
+}
+
+@keyframes fadeInPortada {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#portada h1 {
+    font-size: 4em; /* Ajusta según tus necesidades */
+    margin-bottom: 0.2em;
+    color: var(--color-blanco);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#portada p {
+    font-size: 1.8em; /* Ajusta según tus necesidades */
+    font-family: var(--fuente-texto);
+    font-weight: 300;
+}
+
+#portada p:last-of-type {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #f0f0f0; /* Un poco menos brillante que el blanco puro */
+}
+
+/* ==========================
+   ESTILOS DEL CONTADOR
+   ========================== */
+#contador-regresivo {
+    background-color: #fff; /* Un fondo ligeramente diferente si deseas */
+    border-bottom: 1px solid #eee;
+}
+
+#tiempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+    gap: 20px; /* Espacio entre elementos del contador */
+    margin: 20px 0 30px;
+}
+
+#tiempo div {
+    background-color: var(--color-fondo);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    min-width: 100px; /* Ancho mínimo para cada caja del contador */
+    text-align: center;
+}
+
+#tiempo div span {
+    display: block;
+    font-size: 3em; /* Tamaño de los números */
+    font-weight: 700;
+    color: var(--color-primario);
+    font-family: var(--fuente-titulos);
+}
+
+#tiempo div { /* Texto "Días", "Horas", etc. */
+    font-size: 0.9em;
+    color: var(--color-texto);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================
+   ESTILOS SECCIONES DE CONTENIDO
+   ========================== */
+#mensaje-pareja p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+#mensaje-pareja p:first-of-type { /* Para la cita bíblica o frase especial */
+    font-style: italic;
+    font-size: 1.3em;
+    color: var(--color-primario);
+    margin-bottom: 25px;
+}
+
+.evento {
+    background-color: var(--color-blanco);
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    max-width: 550px;
+    text-align: left; /* Alineación a la izquierda dentro de la tarjeta del evento */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.evento h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--color-primario);
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.evento p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    display: flex; /* Para alinear icono y texto */
+    align-items: center;
+}
+
+.icono {
+    width: 24px; /* Tamaño de los iconos */
+    height: 24px;
+    margin-right: 10px;
+    filter: invert(40%) sepia(20%) saturate(800%) hue-rotate(0deg) brightness(80%) contrast(90%); /* Para dar color a iconos SVG o PNG simples */
+    /* Ajusta el filter o usa iconos de color directamente */
+}
+
+#codigo-vestimenta p, #mesa-regalos p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mesa-regalos ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#mesa-regalos ul li {
+    margin-bottom: 10px;
+}
+
+#mesa-regalos ul li a {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* ==========================
+   ESTILOS DE LA GALERÍA
+   ========================== */
+#galeria {
+    background-color: #f0ebe5; /* Un fondo ligeramente diferente para destacar */
+}
+
+.slider {
+    position: relative;
+    max-width: 700px; /* Ancho máximo del slider */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    aspect-ratio: 16/10; /* Para mantener una proporción, ajusta según tus fotos */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    display: block;
+    position: absolute; /* Para la transición de opacidad */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    z-index: 0;
+}
+
+.slider img.active { /* Clase que se añadirá con JS a la imagen visible */
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ==========================
+   ESTILOS DE FORMULARIOS
+   ========================== */
+form {
+    max-width: 550px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--color-primario);
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: calc(100% - 24px); /* Ajuste para padding y borde */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: var(--fuente-texto);
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 2px rgba(212, 172, 13, 0.2); /* Usando el color secundario con transparencia */
+    outline: none;
+}
+
+form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 80px;
+}
+
+#rsvp-mensaje, #musica-mensaje {
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* ==========================
+   ESTILOS DE BOTONES
+   ========================== */
+.btn, .btn-mapa, .btn-slider {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco) !important; /* Importante para anular estilos de 'a' */
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 25px; /* Botones redondeados */
+    font-weight: bold;
+    font-family: var(--fuente-texto);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn:hover, .btn-mapa:hover, .btn-slider:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn-mapa {
+    background-color: #777;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.btn-mapa:hover {
+    background-color: #555;
+}
+
+.btn-slider {
+    background-color: rgba(0,0,0,0.5); /* Semi-transparente para el slider */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+.btn-slider:hover {
+    background-color: var(--color-primario);
+    transform: scale(1.05);
+}
+
+/* ==========================
+   ESTILOS DEL PIE DE PÁGINA
+   ========================== */
+footer {
+    background-color: #333; /* O usa var(--color-primario) si prefieres */
+    color: #f0f0f0;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 8px 0;
+    font-family: var(--fuente-texto);
+}
+
+/* ==========================
+   RESPONSIVIDAD (MEDIA QUERIES)
+   ========================== */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    #portada h1 {
+        font-size: 2.8em;
+    }
+    #portada p {
+        font-size: 1.3em;
+    }
+     #portada p:last-of-type {
+        font-size: 1.1em;
+    }
+
+    #tiempo {
+        flex-direction: column; /* Apila el contador en móviles */
+        gap: 15px;
+    }
+    #tiempo div {
+        min-width: auto;
+        padding: 15px;
+        width: 80%; /* Ocupa más ancho en móviles */
+    }
+     #tiempo div span {
+        font-size: 2.5em;
+    }
+
+    .seccion {
+        padding: 40px 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #portada h1 {
+        font-size: 2.2em;
+    }
+    #portada p {
+        font-size: 1.1em;
+    }
+     #portada p:last-of-type {
+        font-size: 1em;
+    }
+
+    #tiempo div span {
+        font-size: 2em;
+    }
+
+    .btn, .btn-mapa, .btn-slider {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* ==========================
+   REPRODUCTOR DE YOUTUBE OCULTO
+   ========================== */
+#youtube-player-container {
+    position: absolute;
+    top: -9999px; /* Lo mueve fuera de la pantalla */
+    left: -9999px;
+    width: 1px;   /* Tamaño mínimo para que funcione */
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden; /* También lo oculta */
+}

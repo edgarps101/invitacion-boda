@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda - YIRMARY & EVERT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header id="portada">
+        <div class="portada-contenido">
+            <h1>¡Nos Casamos!</h1>
+            <p>YIRMARY & EVERT</p>
+            <p>30/05/2025</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="contador-regresivo" class="seccion">
+            <h2>Faltan</h2>
+            <div id="tiempo">
+                <div><span id="dias">00</span> Días</div>
+                <div><span id="horas">00</span> Horas</div>
+                <div><span id="minutos">00</span> Minutos</div>
+                <div><span id="segundos">00</span> Segundos</div>
+            </div>
+            <a href="#confirmar-asistencia" class="btn">¡Confirma tu Asistencia!</a>
+        </section>
+        <section id="mensaje-pareja" class="seccion">
+            <h2>Juntos para siempre</h2>
+            <p>"El amor es paciente, es bondadoso..." (1 Corintios 13:4)</p>
+            <p>Con la alegría de compartir nuestro amor, YIRMARY y EVERT los invitamos a
+                celebrar el inicio de nuestra vida juntos.</p>
+        </section>
+        <section id="eventos" class="seccion">
+            <h2>Detalles de la Celebración</h2>
+
+            <!-- <div class="evento">
+                <h3>Ceremonia Religiosa</h3>
+                <p><img src="img/icono-iglesia.png" alt="Iglesia" class="icono"> [Fecha de la Ceremonia]</p>
+                <p><img src="img/icono-reloj.png" alt="Reloj" class="icono"> [Hora de la Ceremonia]</p>
+                <p><img src="img/icono-ubicacion.png" alt="Ubicación" class="icono"> [Nombre de la Iglesia/Lugar]</p>
+                <p>[Dirección de la Iglesia]</p>
+                <a href="[Link Google Maps Ceremonia]" target="_blank" class="btn-mapa">Ver Ubicación</a>
+            </div> -->
+
+            <div class="evento">
+                <h3>Recepción</h3>
+                <p><i class="bi bi-calendar icono"></i> 30/05/2025</p>
+                <p><i class="bi bi-clock icono"></i> 06:00 P.M.</p>
+                <p><i class="bi bi-map icono"></i> Gana Bistró</p>
+                <a href="https://maps.app.goo.gl/gGMEAYemmwyyMvzi7" target="_blank" class="btn-mapa">Ver Ubicación</a>
+            </div>
+        </section>
+        <!-- <section id="codigo-vestimenta" class="seccion">
+            <h2>Código de Vestimenta</h2>
+            <p>[Ej: Formal, Cocktail, Etiqueta Rigurosa, etc.]</p>
+        </section> -->
+        <!-- <section id="mesa-regalos" class="seccion">
+            <h2>Nuestra Mesa de Regalos</h2>
+            <p>Su presencia es el mejor regalo que podríamos desear. Sin embargo, si desean contribuir a nuestra nueva
+                vida juntos, pueden hacerlo a través de:</p>
+            <ul>
+                <li><a href="https://www.[LINK_MESA_REGALOS_1]" target="_blank">[Nombre de la Tienda 1]</a></li>
+                <li><a href="https://www.[LINK_MESA_REGALOS_2]" target="_blank">[Nombre de la Tienda 2]</a> (Opcional)
+                </li>
+            </ul>
+        </section> -->
+        <!-- <section id="galeria" class="seccion">
+            <h2>Momentos Especiales</h2>
+            <div class="slider">
+                <img src="img/boda-foto1.jpg" alt="Foto 1 de la pareja">
+                <img src="img/boda-foto2.jpg" alt="Foto 2 de la pareja" style="display:none;">
+                <img src="img/boda-foto3.jpg" alt="Foto 3 de la pareja" style="display:none;">
+            </div>
+            <button id="prevBtn" class="btn-slider">Anterior</button>
+            <button id="nextBtn" class="btn-slider">Siguiente</button>
+        </section> -->
+        <!-- <section id="confirmar-asistencia" class="seccion">
+            <h2>Confirma tu Asistencia</h2>
+            <p style="font-size:0.9em; color:#555;">Al hacer clic en "Confirmar Vía WhatsApp", se abrirá una
+                conversación con los detalles de tu confirmación.</p>
+            <form id="rsvp-form">
+                <label for="nombre-invitado">Nombre completo:</label>
+                <input type="text" id="nombre-invitado" name="nombre" required>
+
+                <label for="asistentes">Número de acompañantes (incluyéndote):</label>
+                <input type="number" id="asistentes" name="asistentes" min="1" value="1" required>
+
+                <label for="alergias">¿Tienes alguna alergia o requerimiento alimenticio?</label>
+                <textarea id="alergias" name="alergias" rows="2"
+                    placeholder="Indica aquí si tienes alguna alergia (ej: vegetariano, sin gluten, etc.)"></textarea>
+
+                <label for="mensaje-extra">Déjanos un mensaje (opcional):</label>
+                <textarea id="mensaje-extra" name="mensaje-extra" rows="3"></textarea>
+
+                <button type="submit" class="btn">Confirmar Vía WhatsApp</button>
+            </form>
+            <div id="rsvp-mensaje"></div>
+        </section> -->
+        <!-- <section id="musica" class="seccion">
+            <h2>¡Que no pare la fiesta!</h2>
+            <p>Ayúdanos a crear la playlist perfecta para celebrar nuestro amor.</p>
+            <form id="musica-form">
+                <label for="cancion">Sugiere una canción:</label>
+                <input type="text" id="cancion" name="cancion" required placeholder="Nombre de la canción y artista">
+                <button type="submit" class="btn">Sugerir Canción</button>
+            </form>
+            <div id="musica-mensaje"></div>
+        </section> -->
+
+    </main>
+    <footer>
+        <p>Con amor,</p>
+        <p>YIRMARY & EVERT</p>
+        <p>&copy; 2025 Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="youtube-player-container">
+        <div id="youtube-audio-player"></div>
+    </div>
+
+    <div id="toggleSoundButtonContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
