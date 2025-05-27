@@ -27,6 +27,11 @@ body {
     line-height: 1.7;
     background-color: var(--color-fondo);
     overflow-x: hidden; /* Evita scroll horizontal indeseado */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/fondo.jpg');
+    background-size: 400px auto;
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -84,7 +89,7 @@ img {
    ESTILOS DE LA PORTADA
    ========================== */
 #portada {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/portada-boda.png'); /* Reemplaza con tu imagen de portada */
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/portada-boda.png'); /* Reemplaza con tu imagen de portada */
     background-size: cover;
     background-position: center center;
     background-attachment: fixed; /* Efecto parallax sutil */
@@ -99,7 +104,7 @@ img {
 }
 
 #portada .portada-contenido {
-    background-color: rgba(0, 0, 0, 0.1); /* Sombra muy ligera si es necesaria */
+    background-color: rgba(0, 0, 0, 0.7); /* Sombra muy ligera si es necesaria */
     padding: 30px 50px;
     border-radius: 10px;
     animation: fadeInPortada 1.5s ease-out forwards; /* Animación para el contenido */
@@ -475,4 +480,18 @@ footer p {
     height: 1px;
     overflow: hidden;
     visibility: hidden; /* También lo oculta */
+}
+
+.iniciales-header {
+    width: 300px;      /* Ajusta el tamaño según lo que desees */
+    height: auto;      /* Mantiene la proporción de la imagen */
+    display: block;
+    margin: 0 auto;    /* Centra la imagen si es necesario */
+}
+
+.iniciales-footer {
+    width: 150px;      /* Ajusta el tamaño según lo que desees */
+    height: auto;      /* Mantiene la proporción de la imagen */
+    display: block;
+    margin: 0 auto;    /* Centra la imagen si es necesario */
 }
