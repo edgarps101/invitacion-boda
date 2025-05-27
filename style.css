@@ -10,7 +10,7 @@
 */
 
 :root {
-    --color-primario: #8B5A2B; /* Un marrón elegante, puedes cambiarlo */
+    --color-primario: black;/*#8B5A2B; /* Un marrón elegante, puedes cambiarlo */
     --color-secundario: #D4AC0D; /* Un dorado/ocre, puedes cambiarlo */
     --color-texto: #333333;
     --color-fondo: #fdfaf6; /* Un blanco hueso o crema claro */
